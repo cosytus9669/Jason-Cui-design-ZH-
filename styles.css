@@ -478,8 +478,11 @@ body {
     margin: 0 auto 24px;
 }
 
-.project-gallery{margin-top:24px;}
+.project-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px;}
 .project-gallery .gallery-img{width:100%;border-radius:8px;object-fit:cover;}
+
+.project-gallery.vertical{display:flex;flex-direction:column;gap:16px;margin-top:24px;}
+.project-gallery.vertical .gallery-img{width:100%;height:auto;}
 
 /* 响应式设计 */
 @media (max-width: 1200px) {
