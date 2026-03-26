@@ -175,9 +175,7 @@ body {
     pointer-events: none;
 }
 
-.work-card:hover::before {
-    opacity: 1;
-}
+
 
 .work-card:hover {
     background-color: #f0f0f0;
@@ -325,9 +323,7 @@ body {
     transition: opacity 0.3s ease;
 }
 
-.other-card:hover::before {
-    opacity: 1;
-}
+
 
 .other-card:hover {
     background-color: #f0f0f0;
