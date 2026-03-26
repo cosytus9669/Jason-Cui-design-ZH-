@@ -449,7 +449,7 @@ body {
 
 /* Project section layout */
 .project-section {
-    max-width: 60%;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: center;
 }
@@ -477,12 +477,30 @@ body {
     display: block;
     margin: 0 auto 24px;
 }
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+}
 
-.project-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px;}
-.project-gallery .gallery-img{width:100%;border-radius:8px;object-fit:cover;}
+.project-gallery .gallery-img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
 
-.project-gallery.vertical{display:flex;flex-direction:column;gap:16px;margin-top:24px;}
-.project-gallery.vertical .gallery-img{width:100%;height:auto;}
+.project-gallery.vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.project-gallery.vertical .gallery-img {
+    width: 100%;
+    height: auto;
+}
 
 /* 响应式设计 */
 @media (max-width: 1200px) {
@@ -490,21 +508,21 @@ body {
         grid-template-columns: repeat(2, 1fr);
         gap: 28px;
     }
-    
+
     .other-grid {
         grid-template-columns: 1fr;
         gap: 28px;
     }
-    
+
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 24px;
     }
-    
+
     .container {
         padding: 0 30px;
     }
-    
+
     .nav {
         padding-left: 30px;
         padding-right: 30px;
@@ -515,81 +533,82 @@ body {
     .nav-menu {
         display: none;
     }
-    
+
     .hamburger {
         display: flex;
     }
-    
+
     .work-grid {
         grid-template-columns: 1fr;
         gap: 24px;
     }
-    
+
     .skills-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
+
     .main {
         margin-top: 80px;
         padding-top: 20px;
     }
-    
+
     .page-title {
         font-size: 28px;
         margin-bottom: 40px;
     }
-    
+
     .about-text,
     .other-text {
         font-size: 16px;
     }
-    
+
     .nav-brand a {
         font-size: 20px;
         letter-spacing: 0.8px;
     }
-    
+
     .container {
         padding: 0 20px;
     }
-    
+
     .nav {
         padding: 20px 20px;
     }
 }
 
 @media (max-width: 480px) {
+
     .work-grid,
     .other-grid {
         gap: 20px;
     }
-    
+
     .nav {
         padding: 16px 16px;
     }
-    
+
     .main {
         margin-top: 70px;
     }
-    
+
     .work-title {
         font-size: 14px;
     }
-    
+
     .other-title {
         font-size: 16px;
     }
-    
+
     .container {
         padding: 0 16px;
     }
-    
+
     .page-title {
         font-size: 24px;
         margin-bottom: 30px;
     }
-    
+
     .nav-brand a {
         font-size: 16px;
         letter-spacing: 0.6px;
@@ -629,14 +648,17 @@ body {
     background-color: #f0f0f0;
     margin: 24px 0 40px;
 }
+
 .link-card:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
+
 .link-card h2 {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 8px;
 }
+
 .link-card p {
     font-size: 14px;
     color: #555;
@@ -647,6 +669,7 @@ body {
     text-decoration: none;
     transition: color 0.3s ease;
 }
+
 .link-card a:hover {
     color: #666;
 }
@@ -657,6 +680,7 @@ body {
     align-items: center;
     margin-top: 40px;
 }
+
 .pagination a {
     display: flex;
     align-items: center;
@@ -666,9 +690,11 @@ body {
     font-size: 14px;
     transition: color 0.3s ease;
 }
+
 .pagination a:hover {
     color: #666;
 }
+
 .pagination img {
     width: 80px;
     height: 45px;
@@ -679,16 +705,18 @@ body {
 .video-card summary {
     cursor: pointer;
     padding: 12px 16px;
-    background:#f0f0f0;
-    border:1px solid #ddd;
-    border-radius:4px;
-    font-size:14px;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
 }
+
 .video-card[open] summary {
-    background:#e6e6e6;
+    background: #e6e6e6;
 }
+
 .video-card video {
-    border-radius:4px;
+    border-radius: 4px;
 }
 
 /* ===== Resume Redesign ===== */
@@ -699,12 +727,14 @@ body {
     flex-direction: column;
     gap: 12px;
 }
+
 .resume-name {
     font-size: 36px;
     font-weight: 800;
     color: #000;
     margin: 0;
 }
+
 .contact-info {
     list-style: none;
     padding: 0;
@@ -715,8 +745,15 @@ body {
     font-size: 14px;
     color: #666;
 }
-.contact-info a { color: #666; text-decoration: none; }
-.contact-info a:hover { text-decoration: underline; }
+
+.contact-info a {
+    color: #666;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
 
 /* two column layout */
 .resume-columns {
@@ -725,6 +762,7 @@ body {
     gap: 48px;
     padding: 40px 0 80px;
 }
+
 .left-column .section-title,
 .right-column .section-title {
     font-size: 18px;
@@ -734,61 +772,272 @@ body {
     padding: 4px 8px;
     margin-bottom: 16px;
 }
-.section-block { margin-bottom: 40px; }
-.edu-item, .exp-item { margin-bottom: 24px; }
-.edu-year { float: right; color: #999; font-size: 12px; }
-.exp-header { display: flex; justify-content: space-between; flex-wrap: wrap; font-weight: 600; }
-.exp-dates { color: #999; font-size: 12px; }
-.exp-desc { margin: 8px 0 0 0; font-size: 14px; color: #333; line-height: 1.5; }
-.list-unstyled { padding-left: 16px; margin: 0; color:#333; font-size:14px; }
-.list-unstyled li { margin-bottom: 8px; }
+
+.section-block {
+    margin-bottom: 40px;
+}
+
+.edu-item,
+.exp-item {
+    margin-bottom: 24px;
+}
+
+.edu-year {
+    float: right;
+    color: #999;
+    font-size: 12px;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-weight: 600;
+}
+
+.exp-dates {
+    color: #999;
+    font-size: 12px;
+}
+
+.exp-desc {
+    margin: 8px 0 0 0;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.list-unstyled {
+    padding-left: 16px;
+    margin: 0;
+    color: #333;
+    font-size: 14px;
+}
+
+.list-unstyled li {
+    margin-bottom: 8px;
+}
 
 /* responsiveness */
 @media(max-width: 768px) {
-    .resume-columns { grid-template-columns: 1fr; }
-    .edu-year { float:none; display:block; margin-top:4px; }
-    .exp-header { flex-direction: column; gap:4px; }
+    .resume-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .edu-year {
+        float: none;
+        display: block;
+        margin-top: 4px;
+    }
+
+    .exp-header {
+        flex-direction: column;
+        gap: 4px;
+    }
 }
 
 /* constrain resume width to 70% */
 .resume-header.container,
 .resume-body.container {
-    max-width:70%;
-    margin-left:auto;
-    margin-right:auto;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.resume-body{position:relative;}
-.right-column{position:relative;}
-.download-buttons{
-    position:absolute;
-    right:0;
-    bottom:0;
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-    z-index:1000;
-}
-.download-btn{
-    background:#fff;
-    color:#000;
-    padding:10px 16px;
-    font-size:14px;
-    text-decoration:none;
-    border:1px solid #000;
-    border-radius:4px;
-    transition:background 0.3s, color 0.3s;
-}
-.download-btn:hover{
-    background:#e0e0e0;
+.resume-body {
+    position: relative;
 }
 
-.aspect-card{position:relative;width:100%;padding-top:56.25%;overflow:hidden;border:1px solid #ddd;border-radius:8px;}
-.aspect-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
-.other-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;}
-.aspect-link{display:block;position:relative;}
-.overlay{position:absolute;inset:0;background:rgba(0,0,0,0.45);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:600;opacity:0;transition:opacity .3s;border-radius:8px;}
-.aspect-link:hover .overlay{opacity:1;}
+.right-column {
+    position: relative;
+}
 
-.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px;}
-.photo-grid img{width:100%;height:auto;border-radius:8px;}
+.download-buttons {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1000;
+}
+
+.download-btn {
+    background: #fff;
+    color: #000;
+    padding: 10px 16px;
+    font-size: 14px;
+    text-decoration: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.download-btn:hover {
+    background: #e0e0e0;
+}
+
+.aspect-card {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.aspect-card img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.other-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.aspect-link {
+    display: block;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity .3s;
+    border-radius: 8px;
+}
+
+.aspect-link:hover .overlay {
+    opacity: 1;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.photo-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* ===== 图片灯箱 (Image Lightbox) ===== */
+.img-lightbox-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    cursor: zoom-out;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-lightbox-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.img-lightbox-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.img-lightbox-img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    transform-origin: center center;
+    transform: scale(1) translate(0px, 0px);
+    cursor: grab;
+    user-select: none;
+    -webkit-user-drag: none;
+    border-radius: 4px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    transition: transform 0.05s linear;
+    will-change: transform;
+}
+
+.img-lightbox-img.grabbing {
+    cursor: grabbing;
+    transition: none;
+}
+
+.img-lightbox-close {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    z-index: 10001;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #fff;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, transform 0.2s ease;
+    line-height: 1;
+}
+
+.img-lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: rotate(90deg);
+}
+
+.img-lightbox-hint {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    pointer-events: none;
+    font-family: 'Inter', sans-serif;
+}
+
+/* 让 project-section 内的内容图片显示为可点击 */
+.project-section img {
+    cursor: zoom-in;
+    transition: opacity 0.2s ease;
+}
+
+.project-section img:hover {
+    opacity: 0.88;
+}
+
+/* pagination 缩略图不触发灯箱，还原默认光标 */
+.pagination img {
+    cursor: pointer;
+    opacity: 1 !important;
+    transition: none;
+}
