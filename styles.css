@@ -182,6 +182,10 @@ body {
     transform: translateY(-1px);
 }
 
+.work-card:hover::before {
+    opacity: 1;
+}
+
 .work-title {
     position: relative;
     z-index: 2;
@@ -1024,11 +1028,6 @@ body {
 /* 让 project-section 内的内容图片显示为可点击 */
 .project-section img {
     cursor: zoom-in;
-    transition: opacity 0.2s ease;
-}
-
-.project-section img:hover {
-    opacity: 0.88;
 }
 
 /* pagination 缩略图不触发灯箱，还原默认光标 */
