@@ -136,10 +136,134 @@ body {
     padding: 0 0 80px 0;
 }
 
+/* ── Collapsible Category Blocks ── */
+.category-block {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.category-block + .category-block {
+    margin-top: 0;
+}
+
+/* The clickable bar */
+.category-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4px;
+    height: 70px;
+    background: transparent;
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    cursor: pointer;
+    text-align: left;
+    position: relative;
+    transition: background 0.2s ease;
+    /* Accent line on hover */
+    outline: none;
+}
+
+.category-bar::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #1921be;
+    transition: width 0.35s ease;
+}
+
+.category-bar:hover {
+    background: #fafafa;
+}
+
+.category-bar:hover::after,
+.category-bar.is-open::after {
+    width: 100%;
+}
+
+/* Last bar also needs a bottom border */
+.category-block:last-child .category-content.is-collapsed + * ,
+.category-block:last-child {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.category-block:last-child .category-bar {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Label group */
+.category-label {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+}
+
+.category-index {
+    font-size: 11px;
+    font-weight: 700;
+    color: #1921be;
+    letter-spacing: 0.15em;
+    font-family: 'Inter', sans-serif;
+    flex-shrink: 0;
+}
+
+.category-name {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: #000;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+}
+
+.category-count {
+    font-size: 11px;
+    font-weight: 400;
+    color: #999;
+    letter-spacing: 0.05em;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Arrow icon */
+.category-arrow {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    color: #000;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Rotate arrow when open */
+.category-bar.is-open .category-arrow {
+    transform: rotate(180deg);
+}
+
+/* Collapsible content panel */
+.category-content {
+    overflow: hidden;
+    /* max-height is controlled by JS */
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    padding-top: 0;
+}
+
+/* Add top padding to the inner grid instead so animation is smooth */
+.category-content .work-grid {
+    padding-top: 32px;
+    padding-bottom: 48px;
+}
+
+
+
 .work-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .work-item {
@@ -504,11 +628,6 @@ body {
 
 /* 响应式设计 */
 @media (max-width: 1200px) {
-    .work-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 28px;
-    }
-
     .other-grid {
         grid-template-columns: 1fr;
         gap: 28px;
